@@ -2,6 +2,10 @@ import React from 'react';
 import Nasa from './Nasa/Nasa'
 import Weather from './Weather';
 import Zomato from './Zomato';
+import './Fetch.css'
+import {Container, Grid} from '@material-ui/core'
+import map from '../Components/Assets/map.jpg'
+
 
 export default class Fetch extends React.Component {
     constructor(props) {
@@ -41,11 +45,25 @@ export default class Fetch extends React.Component {
     render(){
         return(
             <div>
-                <h1>24 Hour Project</h1>
+                <Grid className='main' container spacing={1}>
 
-                <Nasa lat={this.state.lat} long={this.state.long} location={this.state.city} />
-                <Weather zip={this.state.zip} country={this.state.country}/>
-                <Zomato lat={this.state.lat} long={this.state.long} location={this.state.city} />
+                    <Grid className='nasa' container item xs={4} spacing={3}>
+                        <Nasa lat={this.state.lat} long={this.state.long} location={this.state.city} />
+                    </Grid>
+
+                    <Grid className='weather' container item xs={4} spacing={3}>
+                        <Weather zip={this.state.zip} country={this.state.country}/>
+                    </Grid>
+
+                    <Grid className='zomato' container item xs={4} spacing={3}>
+                        <Zomato lat={this.state.lat} long={this.state.long} location={this.state.city} />
+                    </Grid>
+
+                </Grid>
+
+                <div id='map'>
+                    {/* <img id="map" src={map}/> */}
+                </div>
 
             </div>
         )

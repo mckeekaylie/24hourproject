@@ -1,4 +1,6 @@
 import React from 'react';
+import weatherIcon from '../Components/Assets/cloudy.png';
+
 export default class Weather extends React.Component {
     constructor(props) {
         super(props)
@@ -25,18 +27,19 @@ export default class Weather extends React.Component {
         })
     }
     render(){
-        function celsiusConverter(props) {
-            return this.props.temp = this.props.temp / 2;
+        // function celsiusConverter(props) {
+        //     return this.props.temp = this.props.temp / 2;
             //Fahrenheit to Celsius : (°F − 32) ÷ 1.8 = °C
             //Celsius to Fahrenheit : (°C × 1.8) + 32 = °F
-        }
+        // }
         return(
             <div>
+                <img src={weatherIcon}/>
                 <h1>Weather Forecast for {this.props.zip}, {this.props.country}</h1>
                 <h3>{this.state.weatherMain}</h3>
                 <h5>{this.state.weatherDesc}</h5>
                 <p>Temperature: {this.state.temp}</p>
-                <button onClick={celsiusConverter()}>Convert to Celsius</button>
+                {/* <button onClick={celsiusConverter()}>Convert to Celsius</button> */}
                 <p>Feels like: {this.state.feelsLike}</p>
                 <p>Wind: {this.state.wind}</p>
             </div>

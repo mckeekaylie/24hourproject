@@ -1,11 +1,12 @@
 import React from 'react';
+import zomatoIcon from '../Components/Assets/fork.png';
 
 export default class Zomato extends React.Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            restaurants: []
+            restaurants: null
         }
     }
 
@@ -36,24 +37,25 @@ export default class Zomato extends React.Component {
                 })
                 console.log(this.state.restaurants)
             })       
-    }  
+        }  
 
     render(){ 
         console.log(this.state.restaurants)
-        const restMapper = this.state.restaurants.map((restaurant, index) => {
-            return(
-                <tr key= {index}>
-                    <td>{restaurant.name}</td>
-                </tr>
-            )
-        })
+        // const restMapper = this.state.restaurants.map((restaurant, index) => {
+        //     return(
+        //         <li key={index}>{restaurant.name}</li>
+        //     )
+        // })
+
+
      
         return(
             <div>
+                <img src={zomatoIcon}/>
                 <h1>Restaurants near:</h1>
                 <p>{this.state.restaurants}</p>
                 <ul>
-                    {restMapper}
+                    {/* {restMapper} */}
                 </ul>  
           {/* {this.state.restaurants.map((restaurant, index) => {
                      return(
