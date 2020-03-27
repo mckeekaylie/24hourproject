@@ -1,5 +1,6 @@
 import React from 'react';
-import NasaDisplay from './NasaDisplay'
+import NasaDisplay from './NasaDisplay';
+import nasaIcon from '../Assets/rocket.png';
 
 class Nasa extends React.Component {
   constructor(props){
@@ -27,6 +28,7 @@ class Nasa extends React.Component {
     render(){
       return(
         <div>
+          <img src={nasaIcon}/>
           <h1>Nasa Image of Your Location</h1>
           <NasaDisplay url={this.state.img}/>
         </div>

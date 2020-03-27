@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css?family=Gotu|Roboto&display=swap');
+
+.main{
+  padding: 6em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img{
+  width: 100px;
+  height: auto;
+}
+
+body {
+  background-color: aqua;
+  font-family: Gotu;
+}
+
+#map{
+  background-image: url('../Components/Assets/map.jpg');
+  background-size: cover;
+  padding: 0;
+  width: 150vw;
+  height: 50vh;
+}
+
+.nasaImg{
+  width: 500px;
+  height: auto;
+}
