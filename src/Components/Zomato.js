@@ -20,7 +20,7 @@ export default class Zomato extends React.Component {
     // }
 
     componentWillReceiveProps(nextProps) {
-
+            console.log(nextProps)
         fetch(`https://developers.zomato.com/api/v2.1/geocode?lat=${nextProps.lat}&lon=${nextProps.long}&apikey=81c9aab1b42ec1d7a28080c10fa3f996`)
             .then(res => res.json())
             .then(json => {
